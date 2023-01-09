@@ -7,9 +7,10 @@ export const getProducts = async () => {
   let response: IGetProductsResponse;
 
   if (isProduction) {
-    response = await axios.get(
-      'https://react-shopping-cart-67954.firebaseio.com/products.json'
-    );
+    // response = await axios.get(
+    //   'https://react-shopping-cart-67954.firebaseio.com/products.json'
+    // );
+    response = require('static/json/products.json');
   } else {
     response = require('static/json/products.json');
   }

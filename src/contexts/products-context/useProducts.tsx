@@ -28,7 +28,6 @@ const useProducts = () => {
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
       let filteredProducts;
-      console.log(products)
       if (filters && filters.length > 0) {
         filteredProducts = products.filter((p: IProduct) =>
           filters.find((filter: string) =>{
