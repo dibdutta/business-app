@@ -2,7 +2,7 @@ import { useProducts } from 'contexts/products-context';
 
 import * as S from './style';
 
-export const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
+export const availablePrices = ['<700', '<1000', '<2000', '<3000', '>1000', '>2000', '>3000'];
 
 const Filter = () => {
   const { filters, filterProducts } = useProducts();
@@ -17,7 +17,6 @@ const Filter = () => {
     }
 
     const filters = Array.from(selectedCheckboxes) as [];
-
     filterProducts(filters);
   };
 
@@ -25,11 +24,11 @@ const Filter = () => {
     <S.Checkbox label={label} handleOnChange={toggleCheckbox} key={label} />
   );
 
-  const createCheckboxes = () => availableSizes.map(createCheckbox);
+  const createCheckboxes = () => availablePrices.map(createCheckbox);
 
   return (
     <S.Container>
-      <S.Title>Sizes:</S.Title>
+      <S.Title>Prices:</S.Title>
       {createCheckboxes()}
     </S.Container>
   );

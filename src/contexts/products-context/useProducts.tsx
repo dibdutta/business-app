@@ -28,11 +28,15 @@ const useProducts = () => {
     getProducts().then((products: IProduct[]) => {
       setIsFetching(false);
       let filteredProducts;
-
+      console.log(products)
       if (filters && filters.length > 0) {
         filteredProducts = products.filter((p: IProduct) =>
-          filters.find((filter: string) =>
-            p.availableSizes.find((size: string) => size === filter)
+          filters.find((filter: string) =>{
+            const filterPrice: number = parseInt(filter.slice(1))
+            const conditionType: string = filter[0]         
+            return  conditionType === "<" ? p.price <= filterPrice : p.price >= filterPrice
+          }
+            
           )
         );
       } else {
