@@ -68,8 +68,8 @@ describe('[contexts] - products-context', () => {
         expect(products).toEqual([
           {
             availableSizes: ['M', 'ML'],
-            currencyFormat: '$',
-            currencyId: 'USD',
+            currencyFormat: '₹',
+            currencyId: 'INR',
             description: '',
             id: 13,
             installments: 5,

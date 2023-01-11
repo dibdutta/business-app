@@ -3,8 +3,8 @@ import { IProduct } from 'models';
 const mockProducts: IProduct[] = [
   {
     availableSizes: ['S', 'L', 'XL', 'XXL'],
-    currencyFormat: '$',
-    currencyId: 'USD',
+    currencyFormat: '₹',
+    currencyId: 'INR',
     description: '14/15 s/nº',
     id: 0,
     installments: 9,
@@ -16,8 +16,8 @@ const mockProducts: IProduct[] = [
   },
   {
     availableSizes: ['X', 'ML', 'L'],
-    currencyFormat: '$',
-    currencyId: 'USD',
+    currencyFormat: '₹',
+    currencyId: 'INR',
     description: '',
     id: 11,
     installments: 3,
@@ -29,8 +29,8 @@ const mockProducts: IProduct[] = [
   },
   {
     availableSizes: ['XL'],
-    currencyFormat: '$',
-    currencyId: 'USD',
+    currencyFormat: '₹',
+    currencyId: 'INR',
     description: '14/15 s/nº - Jogador',
     id: 4,
     installments: 12,

@@ -31,8 +31,8 @@ const useCartTotal = () => {
       productQuantity,
       installments,
       totalPrice,
-      currencyId: 'USD',
-      currencyFormat: '$',
+      currencyId: 'INR',
+      currencyFormat: '₹',
     };
 
     setTotal(total);

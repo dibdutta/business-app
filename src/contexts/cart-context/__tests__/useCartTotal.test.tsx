@@ -45,8 +45,8 @@ describe('[contexts] - cart-context', () => {
           productQuantity: 1,
           installments: 1,
           totalPrice: 10.9,
-          currencyId: 'USD',
-          currencyFormat: '$',
+          currencyId: 'INR',
+          currencyFormat: '₹',
         });
 
         result.current.updateCartTotal(mockCartProducts);
@@ -55,8 +55,8 @@ describe('[contexts] - cart-context', () => {
           productQuantity: 3,
           installments: 12,
           totalPrice: 50.05,
-          currencyId: 'USD',
-          currencyFormat: '$',
+          currencyId: 'INR',
+          currencyFormat: '₹',
         });
       });
     });
